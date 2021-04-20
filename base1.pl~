@@ -1,0 +1,14 @@
+homme( jean) .
+homme(alain).
+femme( lucie) .
+femme( nelly) .
+femme(martine).
+parent( jean, lucie) .
+parent( nelly, lucie) .
+parent( lucie, alain) .
+parent(alain, martine).
+ancetre(X,Y) :-parent(X,Y).
+ancetre(X,Y) :-parent(X,Z),ancetre(Z,Y).
+pere(jean,lucie).
+pere(X) :-pere(X,_).
+
